@@ -7,9 +7,5 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
 
-#app
-spring:
-  profiles: pd-crm-z
-
 server:
   port: 9001
