@@ -1,0 +1,44 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+
+---
+#app
+spring:
+  profiles: cust-center
+  application:
+    name: cust-center
+server:
+  port: 9001
+
+---
+#web
+spring:
+  profiles: crm-web
+  application:
+    name: crm-web
+server:
+  port: 8001
+  
+  
+---
+#zuul
+spring:
+  profiles: cust-zuul
+  application:
+    name: cust-zuul
+
+server:
+  port: 7001
+
+zuul:
+  routes:
+    hello-service:
+      path: /cust-center
+      serviceId: cust-center
+
