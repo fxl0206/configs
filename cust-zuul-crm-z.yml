@@ -1,0 +1,8 @@
+server:
+  port: 7001
+
+zuul:
+  routes:
+    hello-service:
+      path: /cust-center
+      serviceId: cust-center
