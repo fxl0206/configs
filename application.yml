@@ -6,3 +6,24 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+
+---
+#cust-zuul
+spring:
+  profiles: crm-z
+  config:
+    name: crm-zuul
+
+server:
+  port: 7001
+
+zuul:
+  routes:
+    hello-service:
+      path: /
+      serviceId: cust-center
+      
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: true   
