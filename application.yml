@@ -11,8 +11,8 @@ eureka:
 #app
 spring:
   profiles: pd-crm-z
-  application:
-    name: cust-center
+  config: 
+    name:cust-center
 server:
   port: 9001
 
@@ -20,7 +20,7 @@ server:
 #web
 spring:
   profiles: pd-crm-z
-  application:
+  config:
     name: crm-web
 server:
   port: 8001
@@ -30,7 +30,7 @@ server:
 #zuul
 spring:
   profiles: pd-crm-z
-  application:
+  config:
     name: cust-zuul
 
 server:
