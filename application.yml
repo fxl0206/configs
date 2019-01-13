@@ -10,7 +10,7 @@ eureka:
 ---
 #app
 spring:
-  profiles: cust-center
+  profiles: pd-crm-z
   application:
     name: cust-center
 server:
@@ -19,7 +19,7 @@ server:
 ---
 #web
 spring:
-  profiles: crm-web
+  profiles: pd-crm-z
   application:
     name: crm-web
 server:
@@ -29,7 +29,7 @@ server:
 ---
 #zuul
 spring:
-  profiles: cust-zuul
+  profiles: pd-crm-z
   application:
     name: cust-zuul
 
