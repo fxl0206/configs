@@ -4,5 +4,10 @@ server:
 zuul:
   routes:
     hello-service:
-      path: /cust-center
+      path: /
       serviceId: cust-center
+      
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: true
