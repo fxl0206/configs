@@ -9,7 +9,7 @@ eureka:
 
 #app
 spring:
-  config: 
-    name:cust-center
+  profiles: pd-crm-z
+
 server:
   port: 9001
